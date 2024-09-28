@@ -583,7 +583,7 @@ commands = {
 	},
 	whitelist = {
 		Name = "whitelist",
-		Aliases = {"wl"},
+		Aliases = {"hi"},
 		Use = "Whitelists a player, meaning they can use LunarBot. An owner-only command!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
@@ -609,7 +609,7 @@ commands = {
 						table.insert(whitelisted, plr.Name)
 						local bl = plr:FindFirstChild("LunarBotBlacklist")
 						if bl then bl:Destroy() else warn(player.DisplayName .. " was not blacklisted!") end
-						chat("Whitelisted " .. plr.DisplayName .. "! Type .cmds to view commands.")
+						chat("Huh")
 					else
 						chat("Failed to whitelist player - User not found!")
 					end
