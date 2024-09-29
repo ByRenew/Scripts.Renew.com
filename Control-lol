@@ -294,7 +294,7 @@ commands = {
 			
 			if plr then
 				bot.Character:SetPrimaryPartCFrame(CFrame.new(plr.Character.HumanoidRootPart.Position))
-				chat("📸 CAUGHT IN 4K BY LUNARBOT 📸")
+				chat("📸 CAUGHT IN 4K BY BXT 📸")
 			end
 		end,
 	},
@@ -937,7 +937,7 @@ commands = {
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
-				chat("LunarBot's FPS is: " .. tostring(math.round(game.Workspace:GetRealPhysicsFPS())))
+				chat("Bxt's FPS is: " .. tostring(math.round(game.Workspace:GetRealPhysicsFPS())))
 			end)
 		end,
 	},
