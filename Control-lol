@@ -583,7 +583,7 @@ commands = {
 	},
 	whitelist = {
 		Name = "whitelist",
-		Aliases = {"hi"},
+		Aliases = {"wl"},
 		Use = "Whitelists a player, meaning they can use LunarBot. An owner-only command!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
