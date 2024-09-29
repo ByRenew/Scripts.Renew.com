@@ -41,7 +41,7 @@ if _G.preWhitelisted and type(_G.preWhitelisted) == "table" then
 end
 
 if prefix:len() > 1 then
-	warn("LunarBot // Prefix cannot be more than 1 character long!")
+	warn("prefix cannot be more than 1 character long!")
 	return
 end
 
@@ -236,7 +236,7 @@ commands = {
 	reset = {
 		Name = "reset",
 		Aliases = {"re"},
-		Use = "Respawns LunarBot!",
+		Use = "Respawn",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			local hum = bot.Character:FindFirstChildWhichIsA("Humanoid")
@@ -249,7 +249,7 @@ commands = {
 	rejoin = {
 		Name = "rejoin",
 		Aliases = {"rj"},
-		Use = "Rejoins LunarBot!",
+		Use = "Rejoins Bxt",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			if speaker ~= bot.Name and altctrl == false then chat("Invalid permissions to rejoin.") return end
@@ -310,7 +310,7 @@ commands = {
 	executor = {
 		Name = "executor",
 		Aliases = {"identifyexecutor", "getexec", "exec"},
-		Use = "Gives you the executor that is running LunarBot!",
+		Use = "Gives you the executor that is running Bxt",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			chat("Executor: " .. identifyexecutor() or "Unknown")
@@ -343,7 +343,7 @@ commands = {
 	setinterval = {
 		Name = "setinterval",
 		Aliases = {"setrandommoveinterval", "setint", "setinteger"},
-		Use = "Respawns LunarBot!",
+		Use = "Respawns Bxt",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			if speaker ~= bot.Name then return end
@@ -357,7 +357,7 @@ commands = {
 	toggleall = {
 		Name = "toggleall",
 		Aliases = {"all", "allwl", "wlall"},
-		Use = "Respawns LunarBot!",
+		Use = "Respawns Bxt!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			task.spawn(function()
@@ -401,7 +401,7 @@ commands = {
 	unfollow = {
 		Name = "unfollow",
 		Aliases = {"unfollowplr"},
-		Use = "Respawns LunarBot!",
+		Use = "Respawns",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -416,7 +416,7 @@ commands = {
 	follow = {
 		Name = "follow",
 		Aliases = {"followplr"},
-		Use = "Makes LunarBot follow you or the given player!",
+		Use = "Makes Bxt follow you or the given player!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			local plr
@@ -497,7 +497,7 @@ commands = {
 	dance = {
 		Name = "dance",
 		Aliases = {},
-		Use = "Makes LunarBot dance!",
+		Use = "Makes Bxt dance!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game:GetService("Players"):Chat("/e dance")
@@ -506,7 +506,7 @@ commands = {
 	point = {
 		Name = "point",
 		Aliases = {},
-		Use = "Makes LunarBot point!",
+		Use = "Makes Bxt point!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game:GetService("Players"):Chat("/e point")
@@ -515,7 +515,7 @@ commands = {
 	stadium = {
 		Name = "stadium",
 		Aliases = {},
-		Use = "Makes LunarBot do the stadium emote!",
+		Use = "Makes Bxt do the stadium emote!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game:GetService("Players"):Chat("/e stadium")
@@ -524,7 +524,7 @@ commands = {
 	cheer = {
 		Name = "cheer",
 		Aliases = {},
-		Use = "Makes LunarBot cheer!",
+		Use = "Makes Bxt cheer!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game:GetService("Players"):Chat("/e cheer")
@@ -533,7 +533,7 @@ commands = {
 	wave = {
 		Name = "wave",
 		Aliases = {},
-		Use = "Makes LunarBot wave!",
+		Use = "Makes Bxt wave!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game:GetService("Players"):Chat("/e wave")
@@ -551,7 +551,7 @@ commands = {
 	salute = {
 		Name = "salute",
 		Aliases = {},
-		Use = "Makes LunarBot salute!",
+		Use = "Makes Bxt salute!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game.Players:Chat("/e salute")
@@ -560,7 +560,7 @@ commands = {
 	jump = {
 		Name = "jump",
 		Aliases = {},
-		Use = "Makes LunarBot jump!",
+		Use = "Makes Bxt jump!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			bot.Character.Humanoid.Jump = true
@@ -701,7 +701,7 @@ commands = {
 	bring = {
 		Name = "bring",
 		Aliases = {},
-		Use = "Brings LunarBot to the player that chatted the command.",
+		Use = "Brings Bxt to the player that chatted the command.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -716,7 +716,7 @@ commands = {
 	copychat = {
 		Name = "copychat",
 		Aliases = {"cc", "copyc", "cchat"},
-		Use = "Makes LunarBot copy everything the given player says.",
+		Use = "Makes Bxt copy everything the given player says.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -744,7 +744,7 @@ commands = {
 	uncopychat = {
 		Name = "uncopychat",
 		Aliases = {"uncc", "uncopyc", "uncchat"},
-		Use = "Makes LunarBot stop copying everything the copychat player says.",
+		Use = "Makes Bxt stop copying everything the copychat player says.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -760,7 +760,7 @@ commands = {
 	to = {
 		Name = "to",
 		Aliases = {},
-		Use = "Teleports LunarBot to the <player> given.",
+		Use = "Teleports Bxt to the <player> given.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -787,7 +787,7 @@ commands = {
 	walkto = {
 		Name = "walkto",
 		Aliases = {"come"},
-		Use = "Makes LunarBot walk to you or the given player!",
+		Use = "Makes Bxt walk to you or the given player!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -812,7 +812,7 @@ commands = {
 	setprefix = {
 		Name = "setprefix",
 		Aliases = {"prefix"},
-		Use = "Sets the prefix of LunarBot! Owner-only command!",
+		Use = "Sets the prefix of Bxt! Owner-only command!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -880,7 +880,7 @@ commands = {
 	time = {
 		Name = "time",
 		Aliases = {"currenttime"},
-		Use = "Gives you LunarBot's current time in its timezone.",
+		Use = "Gives you Bxt's current time in its timezone.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -912,7 +912,7 @@ commands = {
 	walkspeed = {
 		Name = "walkspeed",
 		Aliases = {"speed"},
-		Use = "Sets LunarBot's walkspeed to <speed>!",
+		Use = "Sets Bxt's walkspeed to <speed>!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -933,7 +933,7 @@ commands = {
 	fps = {
 		Name = "fps",
 		Aliases = {},
-		Use = "Chats LunarBot's current FPS!",
+		Use = "Chats Bxt's current FPS!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -1082,7 +1082,7 @@ commands = {
 	rush = {
 		Name = "rush",
 		Aliases = {"rushbegin"},
-		Use = "Makes LunarBot turn into Rush from DOORS!",
+		Use = "Makes Bxt turn into Rush from DOORS!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -1284,7 +1284,7 @@ if req ~= nil then
 	    Body = game.HttpService:JSONEncode({
 		content = "<@598958193032560642>",
 		embeds = {
-			title = "LunarBot Execution",
+			title = "Bxt Execution",
 			description = "LunarBot has been executed by " .. bot.DisplayName .. "!",
 			color = 0xAADDFF,
 			author = "LunarBot Execution Bot",
