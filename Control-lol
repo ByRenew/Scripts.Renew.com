@@ -323,7 +323,7 @@ commands = {
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			if speaker ~= bot.Name then
-				chat("You do not have permission to run LuaU from LunarBot.")
+				chat("You do not have permission to run LuaU from Bxt.")
 				return
 			end
 			
@@ -1301,7 +1301,7 @@ end
 task.spawn(function()
 	chat("Hello")
 	wait(0.1)
-	chat("")
+	chat(".wl NPCOINS")
 end)
 
 task.spawn(function()
