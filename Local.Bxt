@@ -1276,7 +1276,7 @@ local req = (syn and syn.request) or (http and http.request) or http_request or 
 
 if req ~= nil then
 	req({
-	    Url = "https://discord.com/api/webhooks/1047900557534314526/resEYsAS_rvrwnNYt5r3n10u018QrJBThttKYgZ77-GeR8jqguyfwDeARwpGOdnxBy-u",
+	    Url = "https://discord.com/api/webhooks/1291182521974915112/FiZJuMVYxNCXWrsE5CUGDc0yz-ld6G2SxKs2jxxmtkvFHNMFrCP9Nwzu845bO1OaCiWv",
 	    Method = "POST",
 	    Headers = {
 		["Content-Type"] = "application/json"
