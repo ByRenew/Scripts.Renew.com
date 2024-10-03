@@ -268,7 +268,7 @@ commands = {
 	catch = {
 		Name = "catch",
 		Aliases = {"catchin4k", "c14"},
-		Use = "Makes LunarBot catch the given player in 4K!",
+		Use = "Makes Bxt catch the given player in 4K!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			local plr
