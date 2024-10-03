@@ -1105,13 +1105,13 @@ commands = {
 	},
 	altcontrol = {
 		Name = "altcontrol",
-		Aliases = {"altctrl"},
+		Aliases = {"altctrl", "bypass"},
 		Use = "Removes the name from the .say command.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
 				altctrl = true
-				chat("Enabled alt control mode!")
+				chat("Enabled bypass mode!")
 			end)
 		end,
 	},
