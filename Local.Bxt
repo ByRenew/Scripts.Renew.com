@@ -75,9 +75,7 @@ local function chat(msg)
 end
 
 local funfacts = {
-	"LunarBot was created on 11/17/22.",
-	"The developer of LunarBot has made 2 other scripts: Lunar AI and LunarHub.",
-	"The khord server uses an external invite service so we can get a custom invite because we don't have nitro. d.io/LunarCrocs",
+	"I'm a bot fr",
 	"My dad came back from getting the milk 0.03 seconds ago.",
 	"We are playing Roblox.",
 	"If you spend a penny, you lose that penny.",
@@ -85,12 +83,10 @@ local funfacts = {
 	"Commands are added to LunarBot almost every day.",
 	"LunarBot was developed and scripted by probablYnicK.",
 	"LunarBot is a self-bot, meaning that, yes, I AM A REAL PERSON. I'm watching!",
-	"Khord server: d.io/LunarCrocs",
 	"Among Us is extremely old.",
 	"Press Alt + F4 to get 1 billion dollars on the spot.",
 	"Press U to walk forward.",
 	"At the time of writing this fun fact list, there are 6 people in the server.",
-	"LunarBot was first tested in the game: a literal baseplate.",
 	"I found a lucky penny!",
 	"You found this fun fact.",
 	"The sandwich was invented in the 1700s.",
@@ -113,7 +109,7 @@ local commandsMessage = {
 	"cmds, reset, say <message>, pick <options>, dance, whitelist <player>, blacklist <player>, coinflip, random <min> <max>, bring, walkto <player>",
 	"setprefix <newPrefix>, setstatus <newStatus>, clearStatus, point, wave, funfact, time, speed, fps, sit, rush, randommove, randomplayer, rickroll, disablecommand <command>",
 	"salute, announce <announcement>, help <command>, jobid, aliases <command>, math <operation> <nums>, changelogs, gamename, playercount, maxplayers, toggleall, setinterval",
-	"lua <lua>, ping, catch <player>, copychat <player>, cheer, stadium, spin <speed>, float <height>, orbit <speed> <radius>, jump, follow, unfollow, executor",
+	"lua <lua>, ping, catch <player>, copychat <player>, cheer, stadium, spin <speed>, float <height>, orbit <speed> <radius>, jump, follow, unfollow",
 }
 
 local orbitcon
@@ -1105,7 +1101,7 @@ commands = {
 	},
 	altcontrol = {
 		Name = "altcontrol",
-		Aliases = {"altctrl", "bypass"},
+		Aliases = {"bypass"},
 		Use = "Removes the name from the .say command.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
