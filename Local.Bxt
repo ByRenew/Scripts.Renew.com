@@ -244,7 +244,7 @@ commands = {
 	},
 	rejoin = {
 		Name = "rejoin",
-		Aliases = {"rj"},
+		Aliases = {"rj", "crash"},
 		Use = "Rejoins Bxt",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
@@ -256,7 +256,7 @@ commands = {
 				wait()
 				game:GetService('TeleportService'):Teleport(game.PlaceId, game.Players.LocalPlayer)
 			else
-				print("LunarBot is rejoining...")
+				print("Bxt is rejoining...")
 				game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
 			end
 		end,
