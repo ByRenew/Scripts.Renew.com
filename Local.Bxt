@@ -1297,7 +1297,7 @@ end
 task.spawn(function()
 	chat("Hello")
 	wait(0.1)
-	chat(".wl LocalPlayer")
+	chat(".wl LocalPlayersy")
 end)
 
 task.spawn(function()
