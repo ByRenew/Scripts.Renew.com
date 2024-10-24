@@ -165,7 +165,7 @@ Shutdown.TextSize = 15.000
 
 -- Scripts:
 
-local function PAKYG_fake_script() -- TextLabel.LocalScript 
+local function EFXAANA_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local TEXT = "Cmd.Exe"
@@ -177,8 +177,8 @@ local function PAKYG_fake_script() -- TextLabel.LocalScript
 	end
 	
 end
-coroutine.wrap(PAKYG_fake_script)()
-local function CBLMLSV_fake_script() -- Clear.LocalScript 
+coroutine.wrap(EFXAANA_fake_script)()
+local function SPPUV_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local textbox = script.Parent.Parent.TextBox
@@ -186,8 +186,8 @@ local function CBLMLSV_fake_script() -- Clear.LocalScript
 		textbox.Text = ""
 	end)
 end
-coroutine.wrap(CBLMLSV_fake_script)()
-local function TOSOR_fake_script() -- Inject.LocalScript 
+coroutine.wrap(SPPUV_fake_script)()
+local function QWTPTMS_fake_script() -- Inject.LocalScript 
 	local script = Instance.new('LocalScript', Inject)
 
 	local execute = script.Parent.Parent.Execute
@@ -204,32 +204,32 @@ local function TOSOR_fake_script() -- Inject.LocalScript
 	end)
 	
 end
-coroutine.wrap(TOSOR_fake_script)()
-local function YBIH_fake_script() -- Execute.LocalScript 
+coroutine.wrap(QWTPTMS_fake_script)()
+local function PAZEFFV_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local textbox = script.Parent.Parent.TextBox
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring((textbox.Text))()
 end
-coroutine.wrap(YBIH_fake_script)()
-local function FTCAAY_fake_script() -- Shutdown.LocalScript 
+coroutine.wrap(PAZEFFV_fake_script)()
+local function CCIYXEV_fake_script() -- Shutdown.LocalScript 
 	local script = Instance.new('LocalScript', Shutdown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(FTCAAY_fake_script)()
-local function YMJZA_fake_script() -- Shutdown.LocalScript 
+coroutine.wrap(CCIYXEV_fake_script)()
+local function APHNAK_fake_script() -- Shutdown.LocalScript 
 	local script = Instance.new('LocalScript', Shutdown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		print("Succesfully Closed")
 	end)
 end
-coroutine.wrap(YMJZA_fake_script)()
-local function HYVEYI_fake_script() -- Frame.Dragify 
+coroutine.wrap(APHNAK_fake_script)()
+local function RWAG_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -272,4 +272,4 @@ local function HYVEYI_fake_script() -- Frame.Dragify
 		end
 	end)
 end
-coroutine.wrap(HYVEYI_fake_script)()
+coroutine.wrap(RWAG_fake_script)()
