@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
+local CmdExe = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -12,16 +12,14 @@ local TextBox = Instance.new("TextBox")
 local Clear = Instance.new("TextButton")
 local Inject = Instance.new("TextButton")
 local Execute = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
-local RedCircle = Instance.new("TextButton")
-local TextLabel_3 = Instance.new("TextLabel")
 local Shutdown = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CmdExe.Name = "Cmd.Exe"
+CmdExe.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-Frame.Parent = ScreenGui
+Frame.Parent = CmdExe
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BackgroundTransparency = 1.000
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -112,51 +110,13 @@ Execute.Text = "Execute"
 Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
 Execute.TextSize = 14.000
 
-TextLabel_2.Parent = Execute
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(3.54285765, 0, -5.95999861, 0)
-TextLabel_2.Size = UDim2.new(0, 38, 0, 30)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "🟢"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 14.000
-
-RedCircle.Name = "RedCircle"
-RedCircle.Parent = Frame_2
-RedCircle.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-RedCircle.BackgroundTransparency = 1.000
-RedCircle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-RedCircle.BorderSizePixel = 0
-RedCircle.Position = UDim2.new(0.335483879, 0, 1.86315811, 0)
-RedCircle.Size = UDim2.new(0, -22, 0, 16)
-RedCircle.Font = Enum.Font.SourceSans
-RedCircle.Text = "Clear"
-RedCircle.TextColor3 = Color3.fromRGB(0, 0, 0)
-RedCircle.TextSize = 14.000
-RedCircle.TextTransparency = 1.000
-
-TextLabel_3.Parent = RedCircle
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(8.59091091, 0, -21.8125, 0)
-TextLabel_3.Size = UDim2.new(0, 38, 0, 30)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "🔴"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextSize = 14.000
-
 Shutdown.Name = "Shutdown"
 Shutdown.Parent = Frame_2
 Shutdown.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 Shutdown.BackgroundTransparency = 1.000
 Shutdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Shutdown.BorderSizePixel = 0
-Shutdown.Position = UDim2.new(0.370798022, 0, 0.042105265, 0)
+Shutdown.Position = UDim2.new(0.890152872, 0, 0.0157894734, 0)
 Shutdown.Size = UDim2.new(0, 27, 0, 27)
 Shutdown.Font = Enum.Font.SourceSans
 Shutdown.Text = "x"
@@ -165,7 +125,7 @@ Shutdown.TextSize = 15.000
 
 -- Scripts:
 
-local function EFXAANA_fake_script() -- TextLabel.LocalScript 
+local function FEOAOO_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local TEXT = "Cmd.Exe"
@@ -177,8 +137,8 @@ local function EFXAANA_fake_script() -- TextLabel.LocalScript
 	end
 	
 end
-coroutine.wrap(EFXAANA_fake_script)()
-local function SPPUV_fake_script() -- Clear.LocalScript 
+coroutine.wrap(FEOAOO_fake_script)()
+local function MPWCD_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local textbox = script.Parent.Parent.TextBox
@@ -186,13 +146,12 @@ local function SPPUV_fake_script() -- Clear.LocalScript
 		textbox.Text = ""
 	end)
 end
-coroutine.wrap(SPPUV_fake_script)()
-local function QWTPTMS_fake_script() -- Inject.LocalScript 
+coroutine.wrap(MPWCD_fake_script)()
+local function UOZNJH_fake_script() -- Inject.LocalScript 
 	local script = Instance.new('LocalScript', Inject)
 
 	local execute = script.Parent.Parent.Execute
 	local clear = script.Parent.Parent.Clear
-	local red = script.Parent.Parent.RedCircle
 	local shutdown = script.Parent.Parent.Shutdown
 	script.Parent.MouseButton1Click:Connect(function()
 		wait(1)
@@ -200,36 +159,27 @@ local function QWTPTMS_fake_script() -- Inject.LocalScript
 		clear.Visible = true
 	    shutdown.Visible = true
 		script.Parent.Visible = false
-		red.Visible = false
 	end)
 	
 end
-coroutine.wrap(QWTPTMS_fake_script)()
-local function PAZEFFV_fake_script() -- Execute.LocalScript 
+coroutine.wrap(UOZNJH_fake_script)()
+local function GRYC_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local textbox = script.Parent.Parent.TextBox
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring((textbox.Text))()
 end
-coroutine.wrap(PAZEFFV_fake_script)()
-local function CCIYXEV_fake_script() -- Shutdown.LocalScript 
+coroutine.wrap(GRYC_fake_script)()
+local function MGWBT_fake_script() -- Shutdown.LocalScript 
 	local script = Instance.new('LocalScript', Shutdown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(CCIYXEV_fake_script)()
-local function APHNAK_fake_script() -- Shutdown.LocalScript 
-	local script = Instance.new('LocalScript', Shutdown)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		print("Succesfully Closed")
-	end)
-end
-coroutine.wrap(APHNAK_fake_script)()
-local function RWAG_fake_script() -- Frame.Dragify 
+coroutine.wrap(MGWBT_fake_script)()
+local function OPKHSOT_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -272,4 +222,4 @@ local function RWAG_fake_script() -- Frame.Dragify
 		end
 	end)
 end
-coroutine.wrap(RWAG_fake_script)()
+coroutine.wrap(OPKHSOT_fake_script)()
