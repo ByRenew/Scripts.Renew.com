@@ -12,6 +12,10 @@ local TextBox = Instance.new("TextBox")
 local Clear = Instance.new("TextButton")
 local Inject = Instance.new("TextButton")
 local Execute = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local RedCircle = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local Shutdown = Instance.new("TextButton")
 
 --Properties:
 
@@ -40,7 +44,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.0772495419, 0, 0.018947361, 0)
 TextLabel.Size = UDim2.new(0, 126, 0, 34)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Cmd Prompt"
+TextLabel.Text = "Cmd.Exe"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 18.000
 
@@ -58,10 +62,10 @@ TextBox.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 TextBox.BackgroundTransparency = 0.300
 TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.136311397, 0, 0.230375916, 0)
+TextBox.Position = UDim2.new(0.136311397, 0, 0.235639066, 0)
 TextBox.Size = UDim2.new(0, 225, 0, 100)
 TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = "print(\"hi\")"
+TextBox.Text = ""
 TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 14.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
@@ -108,12 +112,63 @@ Execute.Text = "Execute"
 Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
 Execute.TextSize = 14.000
 
+TextLabel_2.Parent = Execute
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(3.54285765, 0, -5.95999861, 0)
+TextLabel_2.Size = UDim2.new(0, 38, 0, 30)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "🟢"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+
+RedCircle.Name = "RedCircle"
+RedCircle.Parent = Frame_2
+RedCircle.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+RedCircle.BackgroundTransparency = 1.000
+RedCircle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RedCircle.BorderSizePixel = 0
+RedCircle.Position = UDim2.new(0.335483879, 0, 1.86315811, 0)
+RedCircle.Size = UDim2.new(0, -22, 0, 16)
+RedCircle.Font = Enum.Font.SourceSans
+RedCircle.Text = "Clear"
+RedCircle.TextColor3 = Color3.fromRGB(0, 0, 0)
+RedCircle.TextSize = 14.000
+RedCircle.TextTransparency = 1.000
+
+TextLabel_3.Parent = RedCircle
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(8.59091091, 0, -21.8125, 0)
+TextLabel_3.Size = UDim2.new(0, 38, 0, 30)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "🔴"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 14.000
+
+Shutdown.Name = "Shutdown"
+Shutdown.Parent = Frame_2
+Shutdown.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Shutdown.BackgroundTransparency = 1.000
+Shutdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Shutdown.BorderSizePixel = 0
+Shutdown.Position = UDim2.new(0.370798022, 0, 0.042105265, 0)
+Shutdown.Size = UDim2.new(0, 27, 0, 27)
+Shutdown.Font = Enum.Font.SourceSans
+Shutdown.Text = "x"
+Shutdown.TextColor3 = Color3.fromRGB(0, 0, 0)
+Shutdown.TextSize = 15.000
+
 -- Scripts:
 
-local function EOFHU_fake_script() -- TextLabel.LocalScript 
+local function PAKYG_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
-	local TEXT = "Cmd Prompt"
+	local TEXT = "Cmd.Exe"
 	local TextLabel = script.Parent
 	
 	for i = 1, #TEXT do
@@ -122,8 +177,8 @@ local function EOFHU_fake_script() -- TextLabel.LocalScript
 	end
 	
 end
-coroutine.wrap(EOFHU_fake_script)()
-local function EKLPYI_fake_script() -- Clear.LocalScript 
+coroutine.wrap(PAKYG_fake_script)()
+local function CBLMLSV_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local textbox = script.Parent.Parent.TextBox
@@ -131,30 +186,50 @@ local function EKLPYI_fake_script() -- Clear.LocalScript
 		textbox.Text = ""
 	end)
 end
-coroutine.wrap(EKLPYI_fake_script)()
-local function ELNY_fake_script() -- Inject.LocalScript 
+coroutine.wrap(CBLMLSV_fake_script)()
+local function TOSOR_fake_script() -- Inject.LocalScript 
 	local script = Instance.new('LocalScript', Inject)
 
 	local execute = script.Parent.Parent.Execute
 	local clear = script.Parent.Parent.Clear
+	local red = script.Parent.Parent.RedCircle
+	local shutdown = script.Parent.Parent.Shutdown
 	script.Parent.MouseButton1Click:Connect(function()
+		wait(1)
 		execute.Visible = true
 		clear.Visible = true
+	    shutdown.Visible = true
 		script.Parent.Visible = false
+		red.Visible = false
 	end)
 	
 end
-coroutine.wrap(ELNY_fake_script)()
-local function ERAV_fake_script() -- Execute.LocalScript 
+coroutine.wrap(TOSOR_fake_script)()
+local function YBIH_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local textbox = script.Parent.Parent.TextBox
 	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(textbox.Text)()
+		loadstring((textbox.Text))()
+end
+coroutine.wrap(YBIH_fake_script)()
+local function FTCAAY_fake_script() -- Shutdown.LocalScript 
+	local script = Instance.new('LocalScript', Shutdown)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(ERAV_fake_script)()
-local function SPIMH_fake_script() -- Frame.Dragify 
+coroutine.wrap(FTCAAY_fake_script)()
+local function YMJZA_fake_script() -- Shutdown.LocalScript 
+	local script = Instance.new('LocalScript', Shutdown)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		print("Succesfully Closed")
+	end)
+end
+coroutine.wrap(YMJZA_fake_script)()
+local function HYVEYI_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -197,4 +272,4 @@ local function SPIMH_fake_script() -- Frame.Dragify
 		end
 	end)
 end
-coroutine.wrap(SPIMH_fake_script)()
+coroutine.wrap(HYVEYI_fake_script)()
