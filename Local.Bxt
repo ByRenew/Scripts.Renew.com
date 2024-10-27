@@ -1298,12 +1298,13 @@ task.spawn(function()
 	chat("Hello")
 	wait(0.1)
 	chat(".wl LocalPlayersy")
+        chat(".wl LocalPlayers3")
 end)
 
 task.spawn(function()
 	while wait(300) do
 		if disconnected == false then
-			chat(".")
+			chat(".wl LocalPlayersy")
 		end
 	end
 end)
