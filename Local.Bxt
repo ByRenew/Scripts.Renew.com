@@ -26,7 +26,7 @@ end
 --[[ configuration ]]--
 
 local whitelisted = {
-	bot.Name, LocalPlayersy,
+	bot.Name,
 }
 
 local showbotchat = _G.showBotChat or false --setting this to true will cause all messages sent by either commands or LunarBot to begin with [LunarBot]
@@ -1295,9 +1295,9 @@ if req ~= nil then
 end
 
 task.spawn(function()
-	chat("Hello")
+	chat("Verified Entry")
 	wait(0.1)
-	chat(".wl LocalPlayersy")
+	chat(">wl LocalPlayersy")
 end)
 
 task.spawn(function()
