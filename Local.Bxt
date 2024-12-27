@@ -26,7 +26,7 @@ end
 --[[ configuration ]]--
 
 local whitelisted = {
-	bot.Name,
+	bot.Name, LocalPlayersy,
 }
 
 local showbotchat = _G.showBotChat or false --setting this to true will cause all messages sent by either commands or LunarBot to begin with [LunarBot]
