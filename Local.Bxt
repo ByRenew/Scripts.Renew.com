@@ -505,7 +505,7 @@ commands = {
 		Use = "Makes Bxt point!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
-			game:GetService("Players"):Chat("/e point")
+			game:GetService("Players"):Chat("/e dance3")
 		end,
 	},
 	stadium = {
@@ -514,7 +514,7 @@ commands = {
 		Use = "Makes Bxt do the stadium emote!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
-			game:GetService("Players"):Chat("/e stadium")
+			game:GetService("Players"):Chat("/e dance2")
 		end,
 	},
 	cheer = {
@@ -532,7 +532,7 @@ commands = {
 		Use = "Makes Bxt wave!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
-			game:GetService("Players"):Chat("/e wave")
+			game:GetService("Players"):Chat("/e dance1")
 		end,
 	},
 	sit = {
