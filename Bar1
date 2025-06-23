@@ -1,0 +1,17 @@
+game.StarterGui:SetCore("SendNotification", {
+Title = "[ConsoleX]",
+Text = "Press F9 or type /console in chat.",
+Duration = 15
+})
+
+task.spawn(function()
+warn("ConsoleX is discontinued use, Dhelan and xlox262's New Script VoidOS instead.")
+
+local loadstringText = 'loadstring(game:HttpGet("https://github.com/ByRenew/Scripts.Renew.com/blob/main/Bar2"))()'
+
+if setclipboard then
+setclipboard(loadstringText)
+else
+warn("[TerminalX] setclipboard not supported on this executor.")
+end
+end)
