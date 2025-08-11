@@ -53,7 +53,7 @@ TextButton.Size = UDim2.new(0, 20, 0, 20)
 TextButton.Font = Enum.Font.SourceSans
 TextButton.Text = "x"
 TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.TextSize = 20.000
+TextButton.TextSize = 25.000
 
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
