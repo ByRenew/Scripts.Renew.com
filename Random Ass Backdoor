@@ -64,7 +64,7 @@ TextBox.BorderSizePixel = 0
 TextBox.Position = UDim2.new(0.321311474, 0, 0.270270258, 0)
 TextBox.Size = UDim2.new(0, 198, 0, 124)
 TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = "ik u luv daddy exvy/test discord: envysplague"
+TextBox.Text = "Discord: envysplague"
 TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 14.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
@@ -394,7 +394,7 @@ local function setupBackdoorFunctionality()
                     backdoor = remote
                     debug(remote:GetFullName(), 3)
                     
-                    runRemote(remote, "a=Instance.new('Hint')a.Text='ik u luv dadddy exvy/test'while true do a.Parent=workspace;wait(15)a:Remove()wait(30)end")
+                    runRemote(remote, "a=Instance.new('Hint')a.Text='T3ST ON TOP !Discord: envysplague'while true do a.Parent=workspace;wait(15)a:Remove()wait(30)end")
                     
                     return true
                 end
