@@ -48,12 +48,13 @@ TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BackgroundTransparency = 1.000
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.934426248, 0, 0, 0)
-TextButton.Size = UDim2.new(0, 20, 0, 20)
+TextButton.Position = UDim2.new(0.885245919, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 35, 0, 35)
 TextButton.Font = Enum.Font.SourceSans
 TextButton.Text = "x"
 TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.TextSize = 25.000
+TextButton.TextSize = 30.000
+TextButton.TextYAlignment = Enum.TextYAlignment.Top
 
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
@@ -63,7 +64,7 @@ TextBox.BorderSizePixel = 0
 TextBox.Position = UDim2.new(0.321311474, 0, 0.270270258, 0)
 TextBox.Size = UDim2.new(0, 198, 0, 124)
 TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = ""
+TextBox.Text = "Dead ass life"
 TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 14.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
@@ -102,7 +103,7 @@ TextButton_4.Text = "Inject"
 TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_4.TextSize = 20.000
 
-local function CMNE_fake_script() 
+local function KYYEL_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -148,10 +149,10 @@ local function CMNE_fake_script()
 			update(input)
 		end
 	end)
-	
 end
-coroutine.wrap(CMNE_fake_script)()
-local function TJOAR_fake_script() 
+coroutine.wrap(KYYEL_fake_script)()
+
+local function SUNU_fake_script()
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local textLabel = script.Parent
@@ -165,10 +166,10 @@ local function TJOAR_fake_script()
 		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
 		task.wait(0.03)
 	end
-	
 end
-coroutine.wrap(TJOAR_fake_script)()
-local function OXSJLE_fake_script() 
+coroutine.wrap(SUNU_fake_script)()
+
+local function DTBWM_fake_script()
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local Players = game:GetService("Players")
@@ -180,18 +181,19 @@ local function OXSJLE_fake_script()
 		local thumbnailUrl = "https://www.roblox.com/avatar-thumbnail/image?userId=" .. userId .. "&width=420&height=420&format=png&type=bust"
 		imageLabel.Image = thumbnailUrl
 	end
-	
 end
-coroutine.wrap(OXSJLE_fake_script)()
-local function CYSQ_fake_script() 
+coroutine.wrap(DTBWM_fake_script)()
+
+local function WLEUC_fake_script()
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent:Destroy()
+		script.Parent.Parent.Parent.Frame.Visible = false
 	end)
 end
-coroutine.wrap(CYSQ_fake_script)()
-local function EECD_fake_script() 
+coroutine.wrap(WLEUC_fake_script)()
+
+local function ZEAS_fake_script()
 	local script = Instance.new('LocalScript', TextBox)
 
 	local textLabel = script.Parent
@@ -205,10 +207,10 @@ local function EECD_fake_script()
 		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
 		task.wait(0.03)
 	end
-	
 end
-coroutine.wrap(EECD_fake_script)()
-local function QCDVZYD_fake_script() 
+coroutine.wrap(ZEAS_fake_script)()
+
+local function YRXAER_fake_script()
 	local script = Instance.new('LocalScript', TextBox)
 
 	local textBox = script.Parent
@@ -235,10 +237,10 @@ local function QCDVZYD_fake_script()
 			inputConn = nil
 		end
 	end)
-	
 end
-coroutine.wrap(QCDVZYD_fake_script)()
-local function RTFJLUK_fake_script() 
+coroutine.wrap(YRXAER_fake_script)()
+
+local function FKVLOKE_fake_script()
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	local textLabel = script.Parent
@@ -252,10 +254,10 @@ local function RTFJLUK_fake_script()
 		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
 		task.wait(0.03)
 	end
-	
 end
-coroutine.wrap(RTFJLUK_fake_script)()
-local function CYAU_fake_script() 
+coroutine.wrap(FKVLOKE_fake_script)()
+
+local function DGPUPBI_fake_script()
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	local textLabel = script.Parent
@@ -269,10 +271,10 @@ local function CYAU_fake_script()
 		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
 		task.wait(0.03)
 	end
-	
 end
-coroutine.wrap(CYAU_fake_script)()
-local function FYCZ_fake_script() 
+coroutine.wrap(DGPUPBI_fake_script)()
+
+local function UTWNR_fake_script()
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	local textLabel = script.Parent
@@ -286,9 +288,8 @@ local function FYCZ_fake_script()
 		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
 		task.wait(0.03)
 	end
-	
 end
-coroutine.wrap(FYCZ_fake_script)()
+coroutine.wrap(UTWNR_fake_script)()
 
 local function setupBackdoorFunctionality()
     local alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'}
@@ -393,7 +394,7 @@ local function setupBackdoorFunctionality()
                     backdoor = remote
                     debug(remote:GetFullName(), 3)
                     
-                    runRemote(remote, "a=Instance.new('Hint')a.Text='Team T3ST on top!'while true do a.Parent=workspace;wait(15)a:Remove()wait(30)end")
+                    runRemote(remote, "a=Instance.new('Hint')a.Text='Backdoor Scanner | Found backdoor'while true do a.Parent=workspace;wait(15)a:Remove()wait(30)end")
                     
                     return true
                 end
