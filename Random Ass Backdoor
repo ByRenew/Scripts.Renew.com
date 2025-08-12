@@ -1,5 +1,3 @@
--- Using gui1's structure with second GUI's functionality
-
 -- Instances:
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
