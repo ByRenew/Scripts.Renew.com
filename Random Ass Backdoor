@@ -1,14 +1,18 @@
+-- Using gui1's structure with second GUI's functionality
+
+-- Instances:
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local ImageLabel = Instance.new("ImageLabel")
-local TextButton = Instance.new("TextButton")
 local TextBox = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
 local TextButton_2 = Instance.new("TextButton")
 local TextButton_3 = Instance.new("TextButton")
 local TextButton_4 = Instance.new("TextButton")
 
+--Properties:
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -43,19 +47,6 @@ ImageLabel.BorderSizePixel = 0
 ImageLabel.Size = UDim2.new(0, 50, 0, 50)
 ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.BackgroundTransparency = 1.000
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.885245919, 0, 0, 0)
-TextButton.Size = UDim2.new(0, 35, 0, 35)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "x"
-TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.TextSize = 30.000
-TextButton.TextYAlignment = Enum.TextYAlignment.Top
-
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 TextBox.BackgroundTransparency = 0.500
@@ -70,14 +61,25 @@ TextBox.TextSize = 14.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0262295082, 0, 0.74594593, 0)
+TextButton.Size = UDim2.new(0, 75, 0, 36)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Execute"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 20.000
+
 TextButton_2.Parent = Frame
 TextButton_2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0.0262295082, 0, 0.74594593, 0)
+TextButton_2.Position = UDim2.new(0.0262295082, 0, 0.270270258, 0)
 TextButton_2.Size = UDim2.new(0, 75, 0, 36)
 TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = "Execute"
+TextButton_2.Text = "Clear"
 TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.TextSize = 20.000
 
@@ -85,25 +87,28 @@ TextButton_3.Parent = Frame
 TextButton_3.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(0.0262295082, 0, 0.270270258, 0)
+TextButton_3.Position = UDim2.new(0.0262295082, 0, 0.508108079, 0)
 TextButton_3.Size = UDim2.new(0, 75, 0, 36)
 TextButton_3.Font = Enum.Font.SourceSans
-TextButton_3.Text = "Clear"
+TextButton_3.Text = "Inject"
 TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.TextSize = 20.000
 
 TextButton_4.Parent = Frame
-TextButton_4.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.BackgroundTransparency = 1.000
 TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_4.BorderSizePixel = 0
-TextButton_4.Position = UDim2.new(0.0262295082, 0, 0.508108079, 0)
-TextButton_4.Size = UDim2.new(0, 75, 0, 36)
+TextButton_4.Position = UDim2.new(0.885245919, 0, 0, 0)
+TextButton_4.Size = UDim2.new(0, 35, 0, 35)
 TextButton_4.Font = Enum.Font.SourceSans
-TextButton_4.Text = "Inject"
-TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_4.TextSize = 20.000
+TextButton_4.Text = "x"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_4.TextSize = 30.000
+TextButton_4.TextYAlignment = Enum.TextYAlignment.Top
 
-local function CMNE_fake_script()
+-- Scripts:
+local function NRCH_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -150,9 +155,9 @@ local function CMNE_fake_script()
 		end
 	end)
 end
-coroutine.wrap(CMNE_fake_script)()
+coroutine.wrap(NRCH_fake_script)()
 
-local function TJOAR_fake_script()
+local function WTBLVY_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local textLabel = script.Parent
@@ -167,9 +172,9 @@ local function TJOAR_fake_script()
 		task.wait(0.03)
 	end
 end
-coroutine.wrap(TJOAR_fake_script)()
+coroutine.wrap(WTBLVY_fake_script)()
 
-local function OXSJLE_fake_script()
+local function ZQSCMXG_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local Players = game:GetService("Players")
@@ -182,18 +187,9 @@ local function OXSJLE_fake_script()
 		imageLabel.Image = thumbnailUrl
 	end
 end
-coroutine.wrap(OXSJLE_fake_script)()
+coroutine.wrap(ZQSCMXG_fake_script)()
 
-local function CYSQ_fake_script()
-	local script = Instance.new('LocalScript', TextButton)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent:Destroy()
-	end)
-end
-coroutine.wrap(CYSQ_fake_script)()
-
-local function EECD_fake_script()
+local function TLLDV_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local textLabel = script.Parent
@@ -208,9 +204,9 @@ local function EECD_fake_script()
 		task.wait(0.03)
 	end
 end
-coroutine.wrap(EECD_fake_script)()
+coroutine.wrap(TLLDV_fake_script)()
 
-local function QCDVZYD_fake_script()
+local function VSGH_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local textBox = script.Parent
@@ -238,9 +234,26 @@ local function QCDVZYD_fake_script()
 		end
 	end)
 end
-coroutine.wrap(QCDVZYD_fake_script)()
+coroutine.wrap(VSGH_fake_script)()
 
-local function RTFJLUK_fake_script()
+local function ETZJ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local textLabel = script.Parent
+	
+	local hue = 0
+	while true do
+		hue = hue + 0.01
+		if hue > 1 then
+			hue = 0
+		end
+		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
+		task.wait(0.03)
+	end
+end
+coroutine.wrap(ETZJ_fake_script)()
+
+local function FTZHFW_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	local textLabel = script.Parent
@@ -255,9 +268,9 @@ local function RTFJLUK_fake_script()
 		task.wait(0.03)
 	end
 end
-coroutine.wrap(RTFJLUK_fake_script)()
+coroutine.wrap(FTZHFW_fake_script)()
 
-local function CYAU_fake_script()
+local function CQDIVMI_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	local textLabel = script.Parent
@@ -272,25 +285,26 @@ local function CYAU_fake_script()
 		task.wait(0.03)
 	end
 end
-coroutine.wrap(CYAU_fake_script)()
+coroutine.wrap(CQDIVMI_fake_script)()
 
-local function FYCZ_fake_script()
+local function VPIVWD_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
-	local textLabel = script.Parent
-	
-	local hue = 0
-	while true do
-		hue = hue + 0.01
-		if hue > 1 then
-			hue = 0
-		end
-		textLabel.TextColor3 = Color3.fromHSV(hue, 1, 1)
-		task.wait(0.03)
-	end
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
 end
-coroutine.wrap(FYCZ_fake_script)()
+coroutine.wrap(VPIVWD_fake_script)()
 
+local function ADHR_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local screenGui = script.Parent.Parent
+	screenGui.ResetOnSpawn = false
+end
+coroutine.wrap(ADHR_fake_script)()
+
+-- Backdoor functionality from second GUI
 local function setupBackdoorFunctionality()
     local alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'}
     local backdoor = nil
@@ -405,35 +419,35 @@ local function setupBackdoorFunctionality()
         return false
     end
 
-    TextButton_2.MouseButton1Click:Connect(function()
+    TextButton.MouseButton1Click:Connect(function()
         local scriptText = TextBox.Text
         if backdoor then
             runRemote(backdoor, scriptText)
-            TextButton_2.Text = "Executed!"
+            TextButton.Text = "Executed!"
             task.wait(0.5)
-            TextButton_2.Text = "Execute"
+            TextButton.Text = "Execute"
         else
             notify("No backdoor found yet!")
         end
     end)
 
-    TextButton_3.MouseButton1Click:Connect(function()
+    TextButton_2.MouseButton1Click:Connect(function()
         TextBox.Text = ""
-        TextButton_3.Text = "Cleared!"
+        TextButton_2.Text = "Cleared!"
         task.wait(0.5)
-        TextButton_3.Text = "Clear"
+        TextButton_2.Text = "Clear"
     end)
 
-    TextButton_4.MouseButton1Click:Connect(function()
+    TextButton_3.MouseButton1Click:Connect(function()
         if not searching then
             searching = true
             debug('Scanning for backdoors...', 3)
-            TextButton_4.Text = "Scanning..."
+            TextButton_3.Text = "Scanning..."
             if not findRemote() then
-                TextButton_4.Text = "Failure"
+                TextButton_3.Text = "Failure"
                 searching = false
             else
-                TextButton_4.Text = "Injected"
+                TextButton_3.Text = "Injected"
                 searching = false
             end
         end
