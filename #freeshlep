@@ -1,8 +1,6 @@
-local ID = 10420843842
+local ID = 77958870284316
  local Skybox = true
  local particle = true
- 
--- DO NOT CHANGE BELOW. UNLESS YOU KNOW WHAT YOU'RE DOING.
  
 for i,v in pairs (game.Workspace:GetChildren()) do
 		if v:IsA("Part") then
